@@ -12,6 +12,7 @@ public class ArrowRide extends JavaPlugin{
     @Override
     public void onEnable() {
         getLogger().info("ArrowRide has been enabled.");
+        getServer().getPluginManager().registerEvents(new MyListener(), this);
     }
 
     @Override
