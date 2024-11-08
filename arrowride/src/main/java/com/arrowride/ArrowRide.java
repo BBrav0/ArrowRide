@@ -18,4 +18,5 @@ public class ArrowRide extends JavaPlugin{
     public void onDisable() {
         getLogger().info("ArrowRide has been disabled.");
     }
+
 }
