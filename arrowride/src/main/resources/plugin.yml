@@ -1,0 +1,5 @@
+name: ArrowRide
+version: 0.1
+main: com.arrowride.ArrowRide
+author: Benjamin Bravo
+api-version: 1.21.1
