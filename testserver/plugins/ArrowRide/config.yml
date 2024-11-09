@@ -1,4 +1,4 @@
 settings:
   riding: true
-  explosions: true
-  mobs: false
+  explosions: false
+  mobs: true
