@@ -11,7 +11,9 @@ public class ArrowRide extends JavaPlugin{
 
     @Override
     public void onEnable() {
-        getLogger().info("ArrowRide has been enabled.");
+        Commands.enable = true;
+        getLogger().info("ArrowRide has been enabled. Default state: True");
+        getCommand("arrowride").setExecutor(new Commands());
         getServer().getPluginManager().registerEvents(new MyListener(), this);
     }
 

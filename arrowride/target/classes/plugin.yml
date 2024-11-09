@@ -1,5 +1,11 @@
 name: ArrowRide
-version: 0.4.0
+version: 1.0.0
 main: com.arrowride.ArrowRide
 author: Benjamin Bravo
 api-version: 1.21.1
+
+commands:
+  arrowride:
+    description: Toggles arrow riding
+    aliases:
+      - ar
