@@ -1,5 +1,5 @@
 name: ArrowRide
-version: 1.0.8
+version: 2.0
 main: com.arrowride.ArrowRide
 author: Benjamin Bravo
 api-version: 1.21.1
@@ -10,7 +10,7 @@ commands:
     description: Toggles various forms of arrow riding
     aliases:
       - ar
-    usage: "Usage: /<command> [enable|disable] [mobs|explosions]"
+    usage: "Usage: /<command> [enable|disable|help] [mobs|explosions]"
 
 permissions:
   Arrowride.admin:

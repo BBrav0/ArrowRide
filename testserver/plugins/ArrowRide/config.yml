@@ -1,2 +1,4 @@
 settings:
-  mobs: true
+  riding: true
+  explosions: true
+  mobs: false

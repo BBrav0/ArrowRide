@@ -18,6 +18,7 @@ public class MyListener implements Listener{
 
     Entity arrow;
     LivingEntity player;
+
     @EventHandler
     public void onExplode(EntityDamageEvent e) {
         if (!Commands.explosions) {
@@ -64,8 +65,9 @@ public class MyListener implements Listener{
             arrow.removePassenger(player);
         }
 
-        if (Commands.explosions) {
+        if (Commands.explosions && player.getVehicle()==null) {
             arrow.getLocation().createExplosion(4.0f);
+            arrow.remove();
              
         }
 
