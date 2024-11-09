@@ -12,7 +12,10 @@ public class ArrowRide extends JavaPlugin{
     @Override
     public void onEnable() {
         Commands.enable = true;
-        getLogger().info("ArrowRide has been enabled. Default state: True");
+        Commands.explosions = false;
+        Commands.mobs = false;
+        getLogger().info("ArrowRide has been enabled. State: True");
+
         getCommand("arrowride").setExecutor(new Commands());
         getServer().getPluginManager().registerEvents(new MyListener(), this);
     }

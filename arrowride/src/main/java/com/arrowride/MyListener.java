@@ -1,6 +1,7 @@
 package com.arrowride;
 
 
+import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -19,10 +20,25 @@ public class MyListener implements Listener{
     @EventHandler
     public void onShoot(EntityShootBowEvent e) {
 
-    if (!(e.getEntity() instanceof Player) || !Commands.enable) {
+    
+
+        //TEST CASES::::
+    if ((e.getEntity() instanceof Player) && !Commands.enable) {
         return;
     }
+
+    if (!(e.getEntity() instanceof Player) && !Commands.mobs) {
+        return;
+    }
+
+
+
+    //CODE
      this.player = e.getEntity();
+     if (!player.hasPermission("ArrowRide.use")) {
+        return;
+     }
+
     this.arrow = e.getProjectile();
 
     arrow.addPassenger(this.player);
@@ -33,6 +49,11 @@ public class MyListener implements Listener{
     public void onLand(ProjectileHitEvent e) {
         if (e.getEntity().equals(arrow)) {
             arrow.removePassenger(player);
+        }
+
+        if (Commands.explosions) {
+            arrow.getLocation().createExplosion(4.0f);
+             
         }
 
     }
